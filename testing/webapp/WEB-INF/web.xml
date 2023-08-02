@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>Hospital Management System</display-name>
+    <description>This is a simple Hospital Management System</description>
+
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>hms.filter.AuthorizationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern>/app/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LandingServlet</servlet-name>
+        <servlet-class>hms.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>hms.controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>hms.controller.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <servlet-class>hms.controller.ChangePassword</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>hms.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ViewProfile</servlet-name>
+        <servlet-class>hms.controller.ViewProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PatientHomeServlet</servlet-name>
+        <servlet-class>hms.controller.PatientHomeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SetAppointmentServlet</servlet-name>
+        <servlet-class>hms.controller.SetAppointmentServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PrescribeServlet</servlet-name>
+        <servlet-class>hms.controller.PrescribeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ViewPrescriptionServlet</servlet-name>
+        <servlet-class>hms.controller.PatientPrescriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>hms.controller.LogOutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LandingServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ChangePasswordServlet</servlet-name>
+        <url-pattern>/cpw</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewProfile</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PatientHomeServlet</servlet-name>
+        <url-pattern>/patient</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SetAppointmentServlet</servlet-name>
+        <url-pattern>/setappointment</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrescribeServlet</servlet-name>
+        <url-pattern>/prescribe</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewPrescriptionServlet</servlet-name>
+        <url-pattern>/viewprescription</url-pattern>
+    </servlet-mapping>
+
+
+
+<!--    EditProfileServlet
+/edit-->
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+</web-app>
